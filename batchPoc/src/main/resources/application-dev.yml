@@ -1,0 +1,34 @@
+logging:
+  level:
+    root: INFO
+server:
+  port: 8180
+  
+spring:
+  application:
+    name: poc-batch-v2
+  datasource:
+    url: 
+    username: 
+    password: 
+    driver-class-name: oracle.jdbc.OracleDriver
+    
+  main:
+    allow-bean-definition-overriding: true
+    
+integration:
+ api.url:
+ api.uri:
+ 
+params:
+ page.size: 10
+ chunk: 10
+ 
+ query:
+  customer:
+   select: SELECT NAME, HASH
+   from: FROM TB_CUSTOMER
+   where: WHERE HASH IS NOT NULL
+   sort: ID
+   update: UPDATE CUSTOMER SET ANY = ?, TODAY = SYSDATE WHERE ID = ?        
+ 
