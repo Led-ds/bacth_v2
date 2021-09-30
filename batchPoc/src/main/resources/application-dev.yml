@@ -17,8 +17,8 @@ spring:
     allow-bean-definition-overriding: true
     
 integration:
- api.url:
- api.uri:
+ api.url: http://localhost:8081
+ api.uri: /project/v1/anyservice/
  
 params:
  page.size: 10
